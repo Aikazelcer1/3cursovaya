@@ -76,7 +76,7 @@ def parse_property(transaction_data: Dict[str, str], direction: str) -> str:
 
     raw_sender = transaction_data.get(direction)
     if raw_sender is None:
-        return 'Отсутствует'
+        return 'Данные отсутствуют'
     if raw_sender.split()[0] == 'Счет':
         return f'{raw_sender.split()[0]} ' + '**' + f'{raw_sender.split()[1][-4:]}'
     card_number = ''
